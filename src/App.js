@@ -68,6 +68,7 @@ function App(){
        id ={todo.id}
        
        todo={todo.todo}
+       inprogress={todo.inprogress}
        /> 
       ))}
     </div>
