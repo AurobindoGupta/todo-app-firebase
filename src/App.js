@@ -8,7 +8,7 @@ import './App.css';
 import AddCircleOutlinedIcon from '@material-ui/icons/AddCircleOutlined';
 import { db } from './firebase_configuration';
 import firebase from 'firebase';
-import TodoListItem from './todo';
+import TodoListItem from './Todo';
 
 
 
@@ -25,6 +25,7 @@ function App(){
    db.collection("todoS").onSnapshot(function(querySnapshot){
      setTodos(
       querySnapshot.docs.map((doc)=>({
+        timeStamp: doc.data().timeStamp,
         id: doc.id,
         todo: doc.data().todo,
         inprogress: doc.data().inprogress,
@@ -40,6 +41,7 @@ function App(){
       timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
       todo: todoInput,
     });
+    setTodoInput("");
   }
 
 
@@ -61,9 +63,11 @@ function App(){
       </form>
 
       { Btodos.map ((todo) => (
-       <TodoListItem todo={todo.todo} 
-       inprogress={todo.inprogress} 
-       todo={todo.id}
+       <TodoListItem  
+        
+       id ={todo.id}
+       
+       todo={todo.todo}
        /> 
       ))}
     </div>
