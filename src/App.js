@@ -63,7 +63,8 @@ function App(){
       { Btodos.map ((todo) => (
        <TodoListItem todo={todo.todo} 
        inprogress={todo.inprogress} 
-       todo={todo.id}/> 
+       todo={todo.id}
+       /> 
       ))}
     </div>
     </div>
