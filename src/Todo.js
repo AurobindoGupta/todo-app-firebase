@@ -19,7 +19,7 @@ function deleteTodo(){
 
     return (
         <div style={{display:"flex"}} >
-            <ListItem>
+                        <ListItem >
                 <ListItemText primary={todo} secondary={inprogress? "In-Progress":"Completed"}/>
 
                 
@@ -30,7 +30,7 @@ function deleteTodo(){
       <IconButton type="submit" aria-label="add" size="medium" color="secondary" onClick={deleteTodo}> 
         <CancelIcon/>
       </IconButton>
-      
-        </div>
+      </div>
+        
     )
 }

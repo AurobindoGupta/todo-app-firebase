@@ -47,7 +47,10 @@ function App(){
 
   return (
     <div className="App" >
-      <div style={{textAlign:"center"}}>
+      <div style={{display:"flex",
+      flexDirection:"column",
+      justifyContent:"center",
+      alignItems:"center"}}>
       <h1>AUROBINDO GUPTA</h1>
       <h4>TODO LIST APP</h4>
       
@@ -56,11 +59,12 @@ function App(){
       value={todoInput} 
       onChange={(e)=>{setTodoInput(e.target.value)
       }} 
-      style={{width:"35%"}}/>
+      style={{padding:"0% 0%"}}/>
       <IconButton type="submit" aria-label="add" size="medium" color="primary" onClick={addTodo}> 
         <AddCircleOutlinedIcon/>
       </IconButton>
       </form>
+      
 
       { Btodos.map ((todo) => (
        <TodoListItem  
@@ -71,6 +75,7 @@ function App(){
        inprogress={todo.inprogress}
        /> 
       ))}
+      
     </div>
     </div>
   );
