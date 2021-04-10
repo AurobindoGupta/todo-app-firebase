@@ -9,6 +9,7 @@ import AddCircleOutlinedIcon from '@material-ui/icons/AddCircleOutlined';
 import { db } from './firebase_configuration';
 import firebase from 'firebase';
 import TodoListItem from './Todo';
+import { FormatAlignJustify } from '@material-ui/icons';
 
 
 
@@ -47,10 +48,7 @@ function App(){
 
   return (
     <div className="App" >
-      <div style={{display:"flex",
-      flexDirection:"column",
-      justifyContent:"center",
-      alignItems:"center"}}>
+      <div style={{display:"inline-flex"},{flexDirection:"column"}}>
       <h1>AUROBINDO GUPTA</h1>
       <h4>TODO LIST APP</h4>
       

@@ -18,7 +18,7 @@ function deleteTodo(){
 }
 
     return (
-        <div style={{display:"flex"}} >
+        <div style={{display:"flex"},{justifyItems:"center"},{textAlign:"center"}} >
                         <ListItem >
                 <ListItemText primary={todo} secondary={inprogress? "In-Progress":"Completed"}/>
 
