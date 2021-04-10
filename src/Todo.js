@@ -9,27 +9,27 @@ import { db } from './firebase_configuration';
 export default function TodoListItem({id, inprogress, todo}) {
             function toggleInProgress(){
                 db.collection("todoS").doc(id).update({
-                    inprogress: !inprogress
+                    inprogress: !inprogress,
+                    
                 })
+                
             }
-
+ 
 function deleteTodo(){
     db.collection("todoS").doc(id).delete();
 }
 
     return (
-        <div style={{display:"flex"},{justifyItems:"center"},{textAlign:"center"}} >
-                        <ListItem >
-                <ListItemText primary={todo} secondary={inprogress? "In-Progress":"Completed"}/>
-
-                
+        <div style={{display:"flex"}} >
+           <ListItem style={{justifyContent:"center"}}>
+           <ListItemText primary={todo} secondary={inprogress? "In-Progress":"Completed"} style={{color:inprogress?"green":"red"}}/>
             </ListItem>
-            <Button onClick={toggleInProgress}>
-        {inprogress ? "Done" : "UnDone"}
-      </Button>
-      <IconButton type="submit" aria-label="add" size="medium" color="secondary" onClick={deleteTodo}> 
-        <CancelIcon/>
-      </IconButton>
+         <Button onClick={toggleInProgress}>
+            {inprogress ? "Done" : "UnDone"}
+         </Button>
+            <IconButton type="submit" aria-label="add" size="medium" color="secondary" onClick={deleteTodo}> 
+                <CancelIcon/>
+                </IconButton>
       </div>
         
     )

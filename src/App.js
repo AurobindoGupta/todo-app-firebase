@@ -48,7 +48,8 @@ function App(){
 
   return (
     <div className="App" >
-      <div style={{display:"inline-flex"},{flexDirection:"column"}}>
+      <div style={{display:"flex",flexDirection:"column",
+      textAlign:"center",alignItems:"center"}} >
       <h1>AUROBINDO GUPTA</h1>
       <h4>TODO LIST APP</h4>
       
