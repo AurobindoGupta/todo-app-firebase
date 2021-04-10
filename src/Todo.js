@@ -20,7 +20,8 @@ function deleteTodo(){
 }
 
     return (
-        <div style={{display:"flex"}} >
+        <div style={{display:"flex",width:"40%",
+        }} >
            <ListItem style={{justifyContent:"center"}}>
            <ListItemText primary={todo} secondary={inprogress? "In-Progress":"Completed"} style={{color:inprogress?"green":"red"}}/>
             </ListItem>
