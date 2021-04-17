@@ -37,13 +37,28 @@ function App(){
 
   function addTodo(e){
     e.preventDefault();
-    db.collection("todoS").add({
-      inprogress: true,
-      timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
-      todo: todoInput,
-    });
-    setTodoInput("");
-  }
+    var evalue= todoInput;
+        if(evalue){
+          
+          db.collection("todoS").add({
+            inprogress: true,
+            timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
+            todo: todoInput,
+          });
+        
+          setTodoInput("");
+          
+          console.log("has  value");
+        }
+        else{
+          alert("OI.. ENTER TASK😈");
+          console.log("has no value");
+        }
+    
+    
+  
+  
+}
 
 
   return (
@@ -56,7 +71,8 @@ function App(){
       <form>
       <TextField id="standard-basic" label="ENTER TASK." variant="outlined" 
       value={todoInput} 
-      onChange={(e)=>{setTodoInput(e.target.value)
+      onChange={(e)=>{setTodoInput(e.target.value);
+        
       }} 
       style={{padding:"0% 0%"}}/>
       <IconButton type="submit" aria-label="add" size="medium" color="primary" onClick={addTodo}> 
