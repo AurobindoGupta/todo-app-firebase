@@ -1,3 +1,12 @@
+*About 
+
+this is a simple TODO task app
+made using React js, HTML, CSS
+Used firebase firestore for storage.
+the link to the deployed app is https://fir-todo-33b45.web.app/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
