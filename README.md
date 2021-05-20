@@ -1,8 +1,8 @@
 *About 
 
-this is a simple TODO task app
-made using React js, HTML, CSS
-Used firebase firestore for storage.
+this is a simple TODO task app\
+made using React js, HTML, CSS\
+Used firebase firestore for storage.\
 the link to the deployed app is https://fir-todo-33b45.web.app/
 
 
